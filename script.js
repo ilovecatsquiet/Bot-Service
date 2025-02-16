@@ -1,4 +1,3 @@
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Your message has been sent!");
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Website loaded successfully!");
 });
