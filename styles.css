@@ -10,7 +10,10 @@ header {
     padding: 20px;
     background: #1f1f1f;
 }
-.pricing, .contact {
+h1, h2 {
+    color: #00aaff;
+}
+.features, .pricing, .how-it-works, .contact {
     margin: 20px;
 }
 .plan {
@@ -18,13 +21,13 @@ header {
     padding: 20px;
     border-radius: 10px;
     display: inline-block;
+    width: 250px;
+    margin: 10px;
 }
-.buy-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #00aaff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    padding: 5px;
 }
