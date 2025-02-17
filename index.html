@@ -3,56 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiet's Managed Bot Service</title>
+    <title>Custom Gambling Discord Bots</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/YOUR_FA_KIT.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <!-- Sidebar Toggle Icon -->
-    <div id="sidebarIcon" class="sidebar-icon" onclick="toggleSidebar()">
-        <i class="fas fa-bars"></i>
-    </div>
-
-    <!-- Sidebar Navigation -->
-    <nav id="sidebar" class="sidebar">
-        <h2>Quiet's Service</h2>
-        <ul>
-            <li><a href="#pricing-info" onclick="closeSidebar()">Pricing & Customization</a></li>
-            <li><a href="#features" onclick="closeSidebar()">Features</a></li>
-            <li><a href="portfolio.html" onclick="closeSidebar()">Portfolio</a></li>
-            <li><a href="#how-it-works" onclick="closeSidebar()">How It Works</a></li>
-            <li><a href="#contact" onclick="closeSidebar()">Contact</a></li>
-        </ul>
-    </nav>
-
     <header>
-        <h1>Quiet's Managed Bot Service</h1>
-        <p>Get a fully managed, customizable gambling bot for your Discord server.</p>
+        <h1>Custom Gambling Discord Bots</h1>
+        <p>Launch your own gambling server with a fully managed, feature-rich bot.</p>
     </header>
 
-    <section id="pricing-info" class="pricing-info">
+    <section class="pricing-info">
         <h2>Pricing & Customization</h2>
         <p>Choose a package that fits your needs. Every bot is customizable with game settings, payouts, branding, and more.</p>
     </section>
 
-    <!-- Fixed Package Button Placement -->
     <section class="pricing">
         <div class="plan" onclick="showDetails('basic')">
             <h3>Basic Package</h3>
             <p><strong>$20 One-Time</strong> + $1/month hosting</p>
-            <button class="package-btn">View Details</button>
+            <p class="click-text">Click for details</p>
         </div>
         <div class="plan" onclick="showDetails('advanced')">
             <h3>Advanced Customization</h3>
             <p>Pricing varies based on features</p>
-            <button class="package-btn">View Details</button>
+            <p class="click-text">Click for details</p>
         </div>
     </section>
 
-    <section id="features" class="features">
-        <h2>What Makes Quiet's Bot Stand Out?</h2>
+    <section class="features">
+        <h2>What Makes My Bot Stand Out?</h2>
         <ul>
             <li>💰 <strong>Huge Deposits & HiLo</strong> - High-stake betting & thrilling mechanics.</li>
             <li>🔗 <strong>Roblox Verification</strong> - Secure authentication for your players.</li>
@@ -62,13 +42,27 @@
         </ul>
     </section>
 
-    <section id="contact" class="contact">
+    <section class="portfolio-link">
+        <h2>See My Previous Work</h2>
+        <a href="portfolio.html" class="portfolio-button">View Portfolio</a>
+    </section>
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <ol>
+            <li>💬 <strong>DM me to start</strong> – Get a demo and list your customization requests.</li>
+            <li>🚀 <strong>Bot Deployment</strong> – I configure and add the bot to your server.</li>
+            <li>🔄 <strong>Ongoing Support</strong> – Request changes or upgrades anytime.</li>
+        </ol>
+    </section>
+
+    <section class="contact">
         <h2>Contact & Payment</h2>
         <p>📩 DM me on Discord: <strong>YourUsername#1234</strong></p>
         <p>💳 Payments accepted in Crypto (BTC, ETH, USDT, etc.)</p>
     </section>
 
-    <!-- Modal -->
+    <!-- Modal (Hidden by Default) -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
