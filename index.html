@@ -1,68 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Gambling Discord Bots</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <div class="sidebar" id="sidebar">
-        <button class="close-sidebar" onclick="toggleSidebar()">×</button>
-        <a href="index.html">Home</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#features">Features</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </div>
-    
-    <button class="open-sidebar" onclick="toggleSidebar()">☰</button>
-    
-    <header>
-        <h1>Custom Gambling Discord Bots</h1>
-        <p>Launch your own gambling server with a fully managed, feature-rich bot.</p>
-    </header>
+/* Apply Montserrat font */
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
 
-    <section id="pricing" class="pricing-info">
-        <h2>Pricing & Customization</h2>
-        <p>Choose a package that fits your needs. Every bot is customizable with game settings, payouts, branding, and more.</p>
-    </section>
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #1a1a1a;
+    transition: left 0.3s ease-in-out;
+    padding-top: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
 
-    <section class="pricing">
-        <div class="plan" onclick="showDetails('basic')">
-            <h3>Basic Package</h3>
-            <p><strong>$20 One-Time</strong> + $1/month hosting</p>
-            <p class="click-text">Click for details</p>
-        </div>
-        <div class="plan" onclick="showDetails('advanced')">
-            <h3>Advanced Customization</h3>
-            <p>Pricing varies based on features</p>
-            <p class="click-text">Click for details</p>
-        </div>
-    </section>
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
 
-    <section id="features" class="features">
-        <h2>What Makes My Bot Stand Out?</h2>
-        <ul>
-            <li>💰 <strong>Huge Deposits & HiLo</strong> - High-stake betting & thrilling mechanics.</li>
-            <li>🔗 <strong>Roblox Verification</strong> - Secure authentication for your players.</li>
-            <li>⚙️ <strong>Fully Customizable</strong> - Game settings, rewards, branding, & more.</li>
-            <li>🔒 <strong>Compliant & Secure</strong> - Built to follow Discord’s guidelines.</li>
-            <li>🚀 <strong>Managed Hosting</strong> - 24/7 uptime, updates, and bug fixes.</li>
-        </ul>
-    </section>
+.sidebar a:hover {
+    background: #00aaff;
+    border-radius: 5px;
+}
 
-    <section class="portfolio-link">
-        <h2>See My Previous Work</h2>
-        <a href="portfolio.html" class="portfolio-button">View Portfolio</a>
-    </section>
+/* Sidebar Toggle Button */
+.open-sidebar {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
 
-    <section id="contact" class="contact">
-        <h2>Contact & Payment</h2>
-        <p>📩 DM me on Discord: <strong>YourUsername#1234</strong></p>
-        <p>💳 Payments accepted in Crypto (BTC, ETH, USDT, etc.)</p>
-    </section>
-</body>
-</html>
+.open-sidebar i {
+    font-size: 28px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* Page Content Adjustment When Sidebar Opens */
+body.sidebar-open {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* General Styling */
+header {
+    padding: 30px;
+    font-size: 24px;
+}
+
+section {
+    padding: 40px;
+    font-size: 20px;
+}
+
+.plan {
+    width: 300px;
+    padding: 30px;
+    font-size: 18px;
+}
+
+.image-gallery img {
+    width: 350px;
+    height: auto;
+}
