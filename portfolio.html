@@ -7,10 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button class="open-sidebar" onclick="toggleSidebar()">☰</button>
+
+    <div id="sidebar" class="sidebar">
+        <button class="close-sidebar" onclick="toggleSidebar()">✖</button>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
     <header>
         <h1>Portfolio</h1>
         <p>Check out some of my previous bot projects.</p>
-        <a href="index.html" class="back-button">← Back to Home</a>
     </header>
 
     <section class="portfolio">
@@ -24,5 +32,7 @@
     <footer>
         <p>📩 DM me on Discord: <strong>YourUsername#1234</strong></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
