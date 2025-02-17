@@ -9,7 +9,7 @@ body {
     animation: fadeIn 1.5s ease-in-out;
 }
 
-/* Sidebar Styles */
+/* Sidebar */
 .sidebar {
     position: fixed;
     left: -250px;
@@ -17,44 +17,52 @@ body {
     width: 250px;
     height: 100%;
     background: #1a1a1a;
-    transition: left 0.3s;
-    padding-top: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 1000;
 }
 
 .sidebar a {
     display: block;
     color: white;
-    padding: 15px;
+    padding: 15px 20px;
     text-decoration: none;
-    transition: background 0.3s;
+    font-size: 18px;
 }
 
 .sidebar a:hover {
-    background: #00aaff;
+    background: #333;
 }
 
-.open-sidebar {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 24px;
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.close-sidebar {
+.sidebar .close-sidebar {
     position: absolute;
     top: 10px;
     right: 15px;
     font-size: 24px;
     background: none;
-    color: white;
     border: none;
+    color: white;
     cursor: pointer;
 }
 
+.open-sidebar {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.open-sidebar i {
+    font-size: 24px;
+}
+
+/* Open sidebar */
 .sidebar.active {
     left: 0;
 }
