@@ -71,6 +71,30 @@
         </div>
     </div>
 
+    <!-- API Testing Section -->
+    <section class="api-test">
+        <h2>Test formatMessages API</h2>
+        <button onclick="testAPI()">Send Request</button>
+        <pre id="output"></pre>
+    </section>
+
     <script src="script.js"></script>
+    <script>
+        async function testAPI() {
+            const response = await fetch("https://healthy-jonie-lovecats-8424a6b2.koyeb.app/formatMessages", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    details: [
+                        { author: { username: "Alice" }, content: "Hello, world!", timestamp: 1708171200 },
+                        { author: { username: "Bob" }, content: "How are you?", timestamp: 1708171300 },
+                        { author: { username: "Charlie" }, content: "Good morning!", timestamp: 1708171100 }
+                    ]
+                })
+            });
+            const text = await response.text();
+            document.getElementById("output").textContent = text;
+        }
+    </script>
 </body>
 </html>
