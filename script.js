@@ -25,3 +25,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 };
+
+// Sidebar Toggle Functionality
+function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+}
