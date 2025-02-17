@@ -1,14 +1,15 @@
 /* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    left: 0;
+    left: -250px;
     top: 0;
     height: 100%;
-    width: 220px;
+    width: 250px;
     background-color: #1a1a1a;
     padding: 20px;
     text-align: left;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
 }
 
 .sidebar h2 {
@@ -37,13 +38,65 @@
     color: #ffaa00;
 }
 
-/* Adjust content so it doesn’t overlap sidebar */
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.sidebar-toggle:hover {
+    background-color: #0077cc;
+}
+
+/* Show Sidebar */
+.sidebar.active {
+    left: 0;
+}
+
+/* Adjust content */
 body {
-    margin-left: 240px;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     background-color: #121212;
     color: white;
     padding: 0;
     animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Pricing Plan Boxes */
+.pricing {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.plan {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 250px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.plan:hover {
+    background: #252525;
+}
+
+.click-text {
+    font-size: 14px;
+    color: #00aaff;
+    margin-top: 5px;
 }
