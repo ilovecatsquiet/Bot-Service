@@ -1,7 +1,7 @@
-// Sidebar Toggle
-document.getElementById('sidebarToggle').addEventListener('click', function () {
+// Sidebar Toggle Function
+function toggleSidebar() {
     document.getElementById('sidebar').classList.toggle('active');
-});
+}
 
 // Close Sidebar on Link Click
 function closeSidebar() {
