@@ -1,26 +1,26 @@
 function showDetails(plan) {
-    let title, text;
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalText = document.getElementById("modal-text");
 
     if (plan === "basic") {
-        title = "Basic Package";
-        text = "✅ $20 One-Time + $1/month hosting\n\nIncludes:\n- Basic gambling commands\n- Roblox verification system\n- Fully managed & hosted\n- 24/7 uptime & bug fixes";
+        modalTitle.textContent = "Basic Package";
+        modalText.innerHTML = "<strong>$20 One-Time</strong> + $1/month hosting <br> Includes standard games and features.";
     } else if (plan === "advanced") {
-        title = "Advanced Customization";
-        text = "💡 Pricing varies\n\nIncludes:\n- Custom house edge & multipliers\n- Adjustable win probabilities\n- Automated leaderboards\n- Custom bot branding & responses";
+        modalTitle.textContent = "Advanced Customization";
+        modalText.innerHTML = "Pricing varies based on custom features, multipliers, VIP systems, and special requests.";
     }
 
-    document.getElementById("modal-title").innerText = title;
-    document.getElementById("modal-text").innerText = text;
-    document.getElementById("modal").style.display = "block";
+    modal.style.display = "flex";
 }
 
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
 
-// Close modal when clicking outside of content
+// Close modal when clicking outside of it
 window.onclick = function(event) {
-    let modal = document.getElementById("modal");
+    const modal = document.getElementById("modal");
     if (event.target === modal) {
         modal.style.display = "none";
     }
