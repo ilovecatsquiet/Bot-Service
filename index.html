@@ -6,14 +6,26 @@
     <title>Custom Gambling Discord Bots</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="sidebar" id="sidebar">
+        <button class="close-sidebar" onclick="toggleSidebar()">×</button>
+        <a href="index.html">Home</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#features">Features</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+    <button class="open-sidebar" onclick="toggleSidebar()">☰</button>
+    
     <header>
         <h1>Custom Gambling Discord Bots</h1>
         <p>Launch your own gambling server with a fully managed, feature-rich bot.</p>
     </header>
 
-    <section class="pricing-info">
+    <section id="pricing" class="pricing-info">
         <h2>Pricing & Customization</h2>
         <p>Choose a package that fits your needs. Every bot is customizable with game settings, payouts, branding, and more.</p>
     </section>
@@ -31,7 +43,7 @@
         </div>
     </section>
 
-    <section class="features">
+    <section id="features" class="features">
         <h2>What Makes My Bot Stand Out?</h2>
         <ul>
             <li>💰 <strong>Huge Deposits & HiLo</strong> - High-stake betting & thrilling mechanics.</li>
@@ -47,30 +59,10 @@
         <a href="portfolio.html" class="portfolio-button">View Portfolio</a>
     </section>
 
-    <section class="how-it-works">
-        <h2>How It Works</h2>
-        <ol>
-            <li>💬 <strong>DM me to start</strong> – Get a demo and list your customization requests.</li>
-            <li>🚀 <strong>Bot Deployment</strong> – I configure and add the bot to your server.</li>
-            <li>🔄 <strong>Ongoing Support</strong> – Request changes or upgrades anytime.</li>
-        </ol>
-    </section>
-
-    <section class="contact">
+    <section id="contact" class="contact">
         <h2>Contact & Payment</h2>
         <p>📩 DM me on Discord: <strong>YourUsername#1234</strong></p>
         <p>💳 Payments accepted in Crypto (BTC, ETH, USDT, etc.)</p>
     </section>
-
-    <!-- Modal (Hidden by Default) -->
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3 id="modal-title"></h3>
-            <p id="modal-text"></p>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
