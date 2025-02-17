@@ -8,15 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Sidebar Toggle Button -->
+    <button id="sidebarToggle" class="sidebar-toggle">☰ Menu</button>
+
     <!-- Sidebar Navigation -->
-    <nav class="sidebar">
+    <nav id="sidebar" class="sidebar">
         <h2>Quiet's Service</h2>
         <ul>
-            <li><a href="#pricing-info">Pricing & Customization</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#portfolio-link">Portfolio</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#pricing-info" onclick="closeSidebar()">Pricing & Customization</a></li>
+            <li><a href="#features" onclick="closeSidebar()">Features</a></li>
+            <li><a href="#portfolio-link" onclick="closeSidebar()">Portfolio</a></li>
+            <li><a href="#how-it-works" onclick="closeSidebar()">How It Works</a></li>
+            <li><a href="#contact" onclick="closeSidebar()">Contact</a></li>
         </ul>
     </nav>
 
