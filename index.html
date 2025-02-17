@@ -1,99 +1,58 @@
-/* Apply Montserrat font */
-body {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-    background-color: #121212;
-    color: white;
-    margin: 0;
-    padding: 0;
-    animation: fadeIn 1.5s ease-in-out;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiet's Bot Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button class="open-sidebar" onclick="toggleSidebar()"><i class="fas fa-bars"></i></button>
 
-/* Sidebar Styles */
-.sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background: #1a1a1a;
-    transition: left 0.3s ease-in-out;
-    padding-top: 20px;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-}
+    <div id="sidebar" class="sidebar">
+        <button class="close-sidebar" onclick="toggleSidebar()">✖</button>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
 
-.sidebar a {
-    display: block;
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background 0.3s;
-}
+    <header>
+        <h1>Quiet's Bot Services</h1>
+        <p>Custom gambling bots for Discord, fully managed and customizable.</p>
+    </header>
 
-.sidebar a:hover {
-    background: #00aaff;
-    border-radius: 5px;
-}
+    <section>
+        <h2>Our Packages</h2>
+        <div class="pricing">
+            <div class="plan">
+                <h3>Basic Package</h3>
+                <p>🔹 Customizable gambling bot</p>
+                <p>🔹 Full management included</p>
+                <p>💰 <strong>One-time fee</strong></p>
+                <button>Learn More</button>
+            </div>
+            <div class="plan">
+                <h3>Advanced Package</h3>
+                <p>🔥 Everything in Basic + More customization</p>
+                <p>⚡️ Priority support</p>
+                <p>💰 <strong>One-time fee</strong></p>
+                <button>Learn More</button>
+            </div>
+            <div class="plan">
+                <h3>Custom Package</h3>
+                <p>🌟 Fully tailored to your needs</p>
+                <p>📌 Unique features & branding</p>
+                <p>💰 <strong>Contact for pricing</strong></p>
+                <button>Contact</button>
+            </div>
+        </div>
+    </section>
 
-/* Sidebar Toggle Button */
-.open-sidebar {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    font-size: 24px;
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
-}
+    <footer>
+        <p>📩 DM me on Discord: <strong>YourUsername#1234</strong></p>
+    </footer>
 
-.open-sidebar i {
-    font-size: 28px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.close-sidebar {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.sidebar.active {
-    left: 0;
-}
-
-/* Page Content Adjustment When Sidebar Opens */
-body.sidebar-open {
-    margin-left: 250px;
-    transition: margin-left 0.3s ease-in-out;
-}
-
-/* General Styling */
-header {
-    padding: 30px;
-    font-size: 24px;
-}
-
-section {
-    padding: 40px;
-    font-size: 20px;
-}
-
-.plan {
-    width: 300px;
-    padding: 30px;
-    font-size: 18px;
-}
-
-.image-gallery img {
-    width: 350px;
-    height: auto;
-}
+    <script src="script.js"></script>
+</body>
+</html>
