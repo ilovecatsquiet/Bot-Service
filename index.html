@@ -3,43 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Win Animation</title>
+    <title>Upgrader Animation</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #222;
+            background-color: #111;
         }
-        .glass {
-            width: 100px;
-            height: 200px;
-            border: 4px solid #fff;
-            border-radius: 10px;
+        .loader-container {
             position: relative;
-            overflow: hidden;
-            background: transparent;
+            width: 150px;
+            height: 150px;
         }
-        .water {
+        .circle {
             width: 100%;
-            height: 0;
-            background: #00aaff;
-            position: absolute;
-            bottom: 0;
-            animation: fillWin 4s ease-in-out forwards;
+            height: 100%;
+            border-radius: 50%;
+            border: 10px solid #444;
+            border-top-color: #00ff00; /* Win: Green */
+            border-bottom-color: #ff0000; /* Loss: Red */
+            animation: fillUp 3s ease-in-out forwards;
         }
-        @keyframes fillWin {
-            0% { height: 0; }
-            50% { height: 75%; }
-            60% { height: 75%; } /* Pause */
-            100% { height: 100%; }
+
+        /* Loss Animation */
+        .loss .circle {
+            animation: lossFill 3s ease-in-out forwards;
+        }
+
+        /* Win Animation */
+        .win .circle {
+            animation: winFill 3s ease-in-out forwards;
+        }
+
+        @keyframes lossFill {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(270deg); } /* Reaches 75% */
+            80% { transform: rotate(0deg); }   /* Drops to 0% */
+        }
+
+        @keyframes winFill {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(270deg); } /* Reaches 75% */
+            80% { transform: rotate(360deg); } /* Fills to 100% */
         }
     </style>
 </head>
 <body>
-    <div class="glass">
-        <div class="water"></div>
+
+    <!-- Loss Animation -->
+    <div class="loader-container loss">
+        <div class="circle"></div>
     </div>
+
+    <!-- Uncomment for Win Animation -->
+    <!-- 
+    <div class="loader-container win">
+        <div class="circle"></div>
+    </div>
+    -->
+
 </body>
 </html>
